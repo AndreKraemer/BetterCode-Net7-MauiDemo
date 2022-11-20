@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BetterCode7MauiDemo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:BetterCode7MauiDemo.Views"
+    Shell.FlyoutBehavior="Flyout">
+
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout BackgroundColor="{StaticResource Primary}" Padding="50">
+            <Image Source="bco_white.png" WidthRequest="200"/>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:MainPage}"
+        Route="MainPage">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FA-6-Solid-900" 
+                Glyph="{x:StaticResource IconHouse}" Color="Black"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Programm"
+        ContentTemplate="{DataTemplate views:SessionsPage}"
+        Route="SessionsPage">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FA-6-Solid-900" 
+                Glyph="{x:StaticResource IconPersonChalkboard}" Color="Black"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Hover- und Klick-Demo"
+        ContentTemplate="{DataTemplate views:PointerDemos}"
+        Route="PointerDemos">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FA-6-Solid-900" 
+                Glyph="{x:StaticResource IconHandPointer}" Color="Black"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent
+        Title="Maps Demo"
+        ContentTemplate="{DataTemplate views:MapsDemoPage}"
+        Route="MapsDemoPage"
+        IsVisible="{OnPlatform true, WinUI=false}">
+
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="FA-6-Solid-900" 
+                Glyph="{x:StaticResource IconMapLocationDot}" Color="Black"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+</Shell>

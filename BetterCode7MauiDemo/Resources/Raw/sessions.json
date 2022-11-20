@@ -1,0 +1,168 @@
+[
+  {
+    "id": 1,
+    "title": "Begrüßung",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "09:00 - 09:15"
+  },
+
+  {
+    "id": 2,
+    "title": ".NET 7.0 im Überblick: Neuigkeiten für SDK, Runtime und Basisklassen",
+    "description": "Der Eröffnungsvortrag von Dotnet-Doktor Holger Schwichtenberg gibt einen Überblick über die Neuerungen in .NET 7.0 mit Fokus auf den Verbesserungen in den SDK-Werkzeugen, den neuen Kompilierungsoptionen (Native Ahead-of-Time-Kompilierung und WebAssembly/WASI) sowie neuen Funktionen in den .NET-Basisklassenbibliotheken.",
+    "goals": [
+      "Wichtige Fakten zu .NET 7.0: Breaking Changes und Support",
+      "Neuerungen im .NET 7.0 SDK im Vergleich zu .NET 6.0",
+      "Übersetzung direkt in Maschinencode mit Native AOT",
+      "Kompilierung nach WebAssembly mit WASI",
+      "Neue und verbesserte Klassen in der .NET-Klassenbibliothek",
+      "Korrespondierende Verbesserungen in Visual Studio"
+    ],
+    "sessionType": 1,
+    "speakerId": 1,
+    "time": "09:15 - 10:00"
+  },
+  {
+    "id": 3,
+    "title": "Pause",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "10:00 - 10:15"
+  },
+  {
+    "id": 4,
+    "title": "Neuigkeiten in C# 11.0",
+    "description": "C# 11 kommt mit einer Vielzahl an Neuerungen, die Code in der Praxis leichter lesbarer und stabiler machen. In dieser Code-only-Session zeigt Rainer Stropek kurz und kompakt, was Entwickler:innen wissen müssen, um von der neuen C#-Version profitieren zu können.",
+    "goals": [
+      "Überblick über die Sprachneuerungen in C# 11",
+      "Beispiele für die praktische Nutzung der neuen Funktionen",
+      "Langfristige Ausrichtung der Sprache C#"
+    ],
+    "sessionType": 1,
+    "speakerId": 2,
+    "time": "10:15 - 11:00"
+  },
+  {
+    "id": 5,
+    "title": "Pause",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "11:00 - 11:15"
+  },
+  {
+    "id": 6,
+    "title": "Neuigkeiten für Web-Entwickler in ASP.NET Core 7.0 und Blazor 7.0",
+    "description": "War noch .NET ein signifikanter Schritt zur Konsolidierung der Plattform und Ende einer langen Reise – Long-Term Support inklusive – wird mit .NET 7 wieder ein Blick in die Zukunft geworfen. An vielen Stellen gibt es Detailverbesserungen und neue Features. Grund genug, einen Blick auf alle Neuerungen von ASP.NET Core 7.0 und auch auf Blazor 7.0 zu werfen. Was ist neu, wie schmerzvoll ist eine Migration und, vielleicht am wichtigsten, wie geht es weiter?",
+    "goals": [
+      "Neue Features in ASP.NET Core 7.0 kennen lernen",
+      "Neue Features in Blazor 7.0 kennenlernen",
+      "Migration von älteren Versionen einschätzen",
+      "Einen spekulativen Blick in die Zukunft (.NET 8 und darüber hinaus) werfen"
+    ],
+    "sessionType": 1,
+    "speakerId": 3,
+    "time": "11:15 - 12:00"
+  },
+  {
+    "id": 7,
+    "title": "Pause",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "12:00 - 12:15"
+  },
+  {
+    "id": 8,
+    "title": "Neuigkeiten beim OR-Mapping mit Entity Framework Core 7.0",
+    "description": "Ziel der neusten Version von Entity Framework Core ist das weitere Angleichen an das klassische Entity Framework: Reverse Engineering mit T4-Templates, Entity Splitting, Table-Per-Concrete-Type-Vererbung und das Mapping auf primitive Typen sowie Einfügen, Ändern und Löschen per Stored Procedure bei SaveChanges(). Darüber hinaus sind ganz neue Features vorgesehen wie das Mapping von JSON-Spalten, Bulk Updates und ein neuer SQL-Server-Datenbanktreiber.",
+    "goals": [
+      "Angleichungen an das klassische Entity Framework",
+      "Verbliebene Unterschiede zum klassischen Entity Framework",
+      "Neue Funktionen beim OR-Mapping"
+    ],
+    "sessionType": 1,
+    "speakerId": 1,
+    "time": "12:15 - 13:00"
+  },
+  {
+    "id": 9,
+    "title": "Mittagspause",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "13:00 - 14:00"
+  },
+  {
+    "id": 10,
+    "title": "Neuigkeiten für Windows-Entwickler: Windows Forms 7.0, WPF 7.0, WinUI 3",
+    "description": "Zum Entwickeln von Windows Desktop Apps mit .NET lassen sich Microsofts native UI-Frameworks Windows Forms, WPF und WinUI einsetzen. Doch was ist mit .NET 7.0 eigentlich der Stand der Dinge? Was sind die Neuerungen in WPF mit .NET 7.0, was hat sich in Windows Forms getan und welche Entwicklungen gab es in WinUI seit dem Windows App SDK 1.0 Release? All das erfahren Sie in dieser Session. Am Ende werden die einzelnen UI-Frameworks auch miteinander verglichen, was Ihnen bei einer Entscheidungsfindung für ein bestimmtes UI-Framework hilft.",
+    "goals": [
+      "Neuerungen in Windows Forms mit .NET 7.0",
+      "Neuerungen in WPF mit .NET 7.0",
+      "Neuerungen in WinUI 3 seit Windows App SDK 1.0",
+      "Entscheidungsgrundlagen für ein bestimmtes UI Framework"
+    ],
+    "sessionType": 1,
+    "speakerId": 4,
+    "time": "14:00 - 14:45"
+  },
+  {
+    "id": 11,
+    "title": "Pause",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "14:45 - 15:00"
+  },
+  {
+    "id": 12,
+    "title": "Cross-Plattform mit .NET Multi-Platform App UI (MAUI)",
+    "description": ".NET MAUI ist die Evolution von Xamarin.Forms. Kurz nach Veröffentlichung der ersten Version im Mai diesen Jahres kommt mit .NET 7 bereits weniger Monate später die zweite Version heraus. Die neue Version von Microsofts Cross-Plattform-Framework integriert sich nicht nur tiefer als je zuvor in Visual Studio und das .NET SDK, sie ist auch weitaus einsteigerfreundlicher und unterstützt neben mobilen Endgeräten und dem Windows-Desktop nun auch den Mac-Desktop. In diesem Vortrag erhalten Sie einen praxisorientierten Überblick über .NET MAUI und die Änderungen in .NET 7. Anhand praxisnaher Codebeispiele zeigt Ihnen Microsoft MVP André Krämer, wie Sie die ersten Schritte in der Cross-Plattform-Entwicklung mit .NET gehen können. Abgerundet wird der Vortrag mit einem Überblick über die notwendigen Schritte zur Migration bestehender Apps.",
+    "goals": [
+      "Einen praxisnahen Überblick über .NET MAUI erhalten",
+      "Einschätzen können, ob der Einsatz von .NET MAUI im eigenen Projekt vorteilhaft ist",
+      "Den Unterschied zwischen Xamarin.Forms und .NET MAUI verstehen",
+      "Migrationsaufwand von Xamarin.Forms zu .NET MAUI einschätzen können",
+      "Die Neuerungen von .NET MAUI unter .NET 7 kennen lernen"
+    ],
+    "sessionType": 1,
+    "speakerId": 5,
+    "time": "15:00 - 15:45"
+  },
+  {
+    "id": 13,
+    "title": "Pause",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "15:45 - 16:00"
+  },
+  {
+    "id": 14,
+    "title": "Frage-/Diskussionsrunde zu .NET 7.0",
+    "description": "Alexander Neumann bewertet mit den Referenten der betterCode() .NET 7 die Neuerungen der Entwicklungsplattform. Die Teilnehmenden der Konferenz haben die Gelegenheit, sich mit Fragen einzubringen.",
+    "sessionType": 1,
+    "speakerId": 6,
+    "time": "16:00 - 16:45"
+  },
+  {
+    "id": 15,
+    "title": "Pause",
+    "description": "",
+    "sessionType": 3,
+    "speakerId": 0,
+    "time": "16:45 - 17:00"
+  },
+  {
+    "id": 16,
+    "title": "Ausblick auf die nächste Version von C#",
+    "description": "",
+    "sessionType": 1,
+    "speakerId": 2,
+    "time": "17:00 - 17:30"
+  }
+]

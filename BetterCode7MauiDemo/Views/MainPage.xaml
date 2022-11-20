@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:BetterCode7MauiDemo.ViewModels"
+             x:DataType="vm:MainPageViewModel"
+             x:Class="BetterCode7MauiDemo.Views.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="HeaderStyle">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <Grid RowDefinitions="auto,*">
+            <VerticalStackLayout Padding="0,40,0,0" Spacing="10">
+                <VerticalStackLayout.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="{StaticResource Secondary}" Offset="0.1"/>
+                        <GradientStop Color="{StaticResource Tertiary}" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </VerticalStackLayout.Background>
+                <Image Source="bco_white.png" MaximumWidthRequest="380" HorizontalOptions="Center" Margin="5,0" />
+                <Label Style="{StaticResource HeaderStyle}" FontSize="50" Text=".NET 7"/>
+                <Label Style="{StaticResource HeaderStyle}">Das Online-Event von Heise und IT-Visions.de &#10; zum neue .NET-Release</Label>
+                <Label FontAttributes="Bold" Style="{StaticResource HeaderStyle}" Text="22. November 2022"/>
+                <Path Stroke="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" Fill="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}" Aspect="UniformToFill">
+                    <Path.Data>
+                        <PathGeometry>
+                            <PathGeometry.Figures>
+                                <PathFigureCollection>
+                                    <PathFigure IsClosed="True" StartPoint="1,10">
+                                        <PathFigure.Segments>
+                                            <PathSegmentCollection>
+                                                <LineSegment Point="100,10" />
+                                                <LineSegment Point="100,4" />
+                                            </PathSegmentCollection>
+                                        </PathFigure.Segments>
+                                    </PathFigure>
+                                </PathFigureCollection>
+                            </PathGeometry.Figures>
+                        </PathGeometry>
+                    </Path.Data>
+                </Path>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="1" Padding="40" Spacing="40">
+                <Label FontSize="Small">
+                    Seit .NET 6 gibt es eine neue Basis für alle auf Microsofts Entwicklungsplattform aufbauenden Programme.&#10;&#10; Ob Desktop-Applikationen mit Windows Forms und WPF, Webanwendungen mit ASP.NET, mobile Apps mit Universal Windows Platform und .NET MAUI oder Unity-Spiele – alle müssen das neue .NET als zentralen Baukasten nutzen, um für die Zukunft gewappnet zu sein. Das gilt auch für den im November erscheinenden Nachfolger .NET 7.
+                </Label>
+                <Button Text="Zum Programm" Style="{StaticResource HoverButton}" Command="{Binding NavigateToSessionsCommand}" />
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
