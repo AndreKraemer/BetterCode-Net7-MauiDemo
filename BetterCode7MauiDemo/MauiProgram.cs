@@ -30,7 +30,8 @@ public static class MauiProgram
         builder.Services.AddTransient<MainPage, MainPageViewModel>();
         builder.Services.AddTransient<SessionsPage, SessionsPageViewModel>();
         builder.Services.AddTransientWithShellRoute<SessionDetailPage, SessionDetailPageViewModel>(nameof(SessionDetailPage));
-
+        builder.Services.AddTransient<DependencyInjectionDemoPage>();
+        builder.Services.RegisterPlatformServices();
         return builder.Build();
 	}
 }

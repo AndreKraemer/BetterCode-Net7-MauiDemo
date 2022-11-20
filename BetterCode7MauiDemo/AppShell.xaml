@@ -42,6 +42,32 @@
         </ShellContent.Icon>
     </ShellContent>
 
+    <FlyoutItem Title="Plattform-Code">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="FA-6-Solid-900" 
+                Glyph="{x:StaticResource IconCodeFork}" Color="Black"/>
+        </FlyoutItem.Icon>
+        <ShellContent
+        Title="Präprozessoranweisungen"
+        ContentTemplate="{DataTemplate views:PraeprozessorDemoPage}"
+        Route="PraeprozessorDemoPage" />
+
+        <ShellContent
+        Title="Partielle Klassen"
+        ContentTemplate="{DataTemplate views:PartialDemoPage}"
+        Route="PartialDemoPage" />
+
+        <ShellContent
+        Title="Partielle Klassen (via Dateinamen)"
+        ContentTemplate="{DataTemplate views:PartialFileNameBaseDemoPage}"
+        Route="PartialFileNameBaseDemoPage" />
+
+        <ShellContent
+        Title="Dependency Injection"
+        ContentTemplate="{DataTemplate views:DependencyInjectionDemoPage}"
+        Route="DependencyInjectionDemoPage" />
+    </FlyoutItem>
+
     <ShellContent
         Title="Maps Demo"
         ContentTemplate="{DataTemplate views:MapsDemoPage}"
