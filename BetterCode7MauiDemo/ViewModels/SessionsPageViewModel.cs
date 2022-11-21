@@ -1,6 +1,7 @@
 ﻿using BetterCode7MauiDemo.Models;
 using BetterCode7MauiDemo.Services;
 using BetterCode7MauiDemo.Views;
+using BetterCode7MauiDemo.ApplicationWindows;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -15,13 +16,15 @@ public partial class SessionsPageViewModel
     
     private readonly ObservableCollection<Session> _sessions = new ObservableCollection<Session>();
     private readonly IDataService _dataService;
+    private readonly IApplication _application;
 
     public ObservableCollection<Session> Sessions => _sessions;
 
 
-    public SessionsPageViewModel(IDataService dataService)
+    public SessionsPageViewModel(IDataService dataService, IApplication application)
     {
         _dataService = dataService;
+        _application = application;
     }
 
     public async Task Initialize()
@@ -43,6 +46,17 @@ public partial class SessionsPageViewModel
             };
         await Shell.Current.GoToAsync($"{nameof(SessionDetailPage)}", navigationParameter);
     }
+
+    [RelayCommand]
+    private void OpenDetailsPageInNewWindow(Session session)
+    {
+        var window = new SessionDetailWindow(session)
+        {
+            Width = 500,
+            Height = 650
+        };
+        _application.OpenWindow(window);
+     }
 
     [RelayCommand]
     private async Task CallSpeakerBusiness(Speaker speaker)

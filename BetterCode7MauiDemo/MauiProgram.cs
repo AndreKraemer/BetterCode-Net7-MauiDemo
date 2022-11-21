@@ -26,6 +26,8 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
+		builder.Services.AddSingleton(() => { return (IApplication)Application.Current; });
+
 		builder.Services.AddSingleton<IDataService, FileDataService>();
         builder.Services.AddTransient<MainPage, MainPageViewModel>();
         builder.Services.AddTransient<SessionsPage, SessionsPageViewModel>();

@@ -4,10 +4,11 @@
              x:Class="BetterCode7MauiDemo.Resources.Styles.MyStyles">
     <Style TargetType="Button" x:Key="HoverButton">
         <Setter Property="Padding" Value="30,15,30,15"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
         <Setter Property="HorizontalOptions" Value="Center"/>
         <Setter Property="Shadow">
             <Setter.Value>
-                <Shadow Brush="Black" Offset="4,4" Radius="15" Opacity="0.6"/>
+                <Shadow Brush="{AppThemeBinding Light=Black, Dark={StaticResource Gray200}}" Offset="4,4" Radius="15" Opacity="0.6"/>
             </Setter.Value>
         </Setter>
         <Setter Property="Background">
@@ -26,7 +27,7 @@
                         <VisualState.Setters>
                             <Setter Property="Shadow">
                                 <Setter.Value>
-                                    <Shadow Brush="Black" Offset="8,8" Radius="30" Opacity="0.8"/>
+                                    <Shadow Brush="{AppThemeBinding Light=Black, Dark={StaticResource Gray200}}" Offset="8,8" Radius="30" Opacity="0.8"/>
                                 </Setter.Value>
                             </Setter>
                             <Setter Property="Background">

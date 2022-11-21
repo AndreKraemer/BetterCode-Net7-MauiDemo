@@ -33,22 +33,22 @@
             <DataTemplate x:DataType="models:Session" x:Key="SessionTemplate">
                 <Border StrokeShape="RoundRectangle 10,10,10,10" StrokeThickness="0" 
                                 BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray600}}" Margin="5" Padding="0" >
-                    <Grid MinimumHeightRequest="100" RowDefinitions="25, auto, 25" 
+                    <Grid MinimumHeightRequest="100" RowDefinitions="25, auto, 60" 
                           ColumnDefinitions="5, 150, *" 
                           ToolTipProperties.Text="Kontextmenü über Rechtsklick öffnen">
                         <BoxView Color="{StaticResource Blue200Accent}" Grid.RowSpan="3" VerticalOptions="FillAndExpand" />
                         <Label Text="{Binding Time}" Grid.Column="2" />
-                        <Border StrokeShape="RoundRectangle 15,15,15,15" StrokeThickness="0" 
+                        <Border StrokeShape="RoundRectangle 15,15,15,15" StrokeThickness="0"  
                                         Grid.RowSpan="3" Grid.Column="1" Margin="5" >
-                            <Image Source="{Binding Speaker.Image}"  Margin="0,0,10,0" MaximumHeightRequest="150"
-                                   ToolTipProperties.Text="{Binding Speaker.Name}"/>
+                            <Image Source="{Binding Speaker.Image}"  Margin="0,0,10,0" MaximumWidthRequest="130"
+                                   ToolTipProperties.Text="{Binding Speaker.Name}" Aspect="AspectFill" />
 
                         </Border>
                         <Label Text="{Binding Title}" Grid.Row="1" Grid.Column="2" FontSize="Subtitle" FontAttributes="Bold"/>
-                        <HorizontalStackLayout Grid.Row="2" Grid.Column="2">
-                            <Label Text="{Binding Speaker.Name, StringFormat='{0} |'}"/>
-                            <Label Text="{Binding Speaker.Company}" TextColor="{StaticResource Gray500}"/>
-                        </HorizontalStackLayout>
+                        <FlexLayout Grid.Row="2" Grid.Column="2" AlignItems="Start" Direction="Row" VerticalOptions="End" Wrap="Wrap" >
+                            <Label Text="{Binding Speaker.Name, StringFormat='{0} |'}" LineBreakMode="NoWrap"/>
+                            <Label Text="{Binding Speaker.Company}" TextColor="{StaticResource Gray400}" LineBreakMode="NoWrap"/>
+                        </FlexLayout>
 
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SessionsPageViewModel}}, Path = NavigateToDetailsPageCommand }" CommandParameter="{Binding .}"/>
@@ -59,6 +59,12 @@
                                     <MenuFlyoutItem.IconImageSource>
                                         <FontImageSource FontFamily="FA-6-Solid-900" 
                                             Glyph="{x:StaticResource IconHeart}" Color="Red" />
+                                    </MenuFlyoutItem.IconImageSource>
+                                </MenuFlyoutItem>
+                                <MenuFlyoutItem Text="In neuem Fenster öffnen" Command="{Binding Source={x:Reference page}, Path= BindingContext.OpenDetailsPageInNewWindowCommand }" CommandParameter="{Binding .}">
+                                    <MenuFlyoutItem.IconImageSource>
+                                        <FontImageSource FontFamily="FA-6-Solid-900" 
+                                            Glyph="{x:StaticResource IconUpRightFromSquare}" Color="{AppThemeBinding Light=Black, Dark=White}" />
                                     </MenuFlyoutItem.IconImageSource>
                                 </MenuFlyoutItem>
                                 <MenuFlyoutSeparator/>

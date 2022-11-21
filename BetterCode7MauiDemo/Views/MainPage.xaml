@@ -51,7 +51,7 @@
                 <Label FontSize="Small">
                     Seit .NET 6 gibt es eine neue Basis für alle auf Microsofts Entwicklungsplattform aufbauenden Programme.&#10;&#10; Ob Desktop-Applikationen mit Windows Forms und WPF, Webanwendungen mit ASP.NET, mobile Apps mit Universal Windows Platform und .NET MAUI oder Unity-Spiele – alle müssen das neue .NET als zentralen Baukasten nutzen, um für die Zukunft gewappnet zu sein. Das gilt auch für den im November erscheinenden Nachfolger .NET 7.
                 </Label>
-                <Button Text="Zum Programm" Style="{StaticResource HoverButton}" Command="{Binding NavigateToSessionsCommand}" />
+                <Button Text=" Zum Programm " Style="{StaticResource HoverButton}" Command="{Binding NavigateToSessionsCommand}"/>
             </VerticalStackLayout>
         </Grid>
     </ScrollView>

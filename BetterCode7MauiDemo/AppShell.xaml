@@ -18,7 +18,7 @@
         Route="MainPage">
         <ShellContent.Icon>
             <FontImageSource FontFamily="FA-6-Solid-900" 
-                Glyph="{x:StaticResource IconHouse}" Color="Black"/>
+                Glyph="{x:StaticResource IconHouse}" Color="{AppThemeBinding Dark=White, Light=Black}"/>
         </ShellContent.Icon>
     </ShellContent>
 
@@ -28,7 +28,7 @@
         Route="SessionsPage">
         <ShellContent.Icon>
             <FontImageSource FontFamily="FA-6-Solid-900" 
-                Glyph="{x:StaticResource IconPersonChalkboard}" Color="Black"/>
+                Glyph="{x:StaticResource IconPersonChalkboard}" Color="{AppThemeBinding Dark=White, Light=Black}"/>
         </ShellContent.Icon>
     </ShellContent>
 
@@ -38,14 +38,14 @@
         Route="PointerDemos">
         <ShellContent.Icon>
             <FontImageSource FontFamily="FA-6-Solid-900" 
-                Glyph="{x:StaticResource IconHandPointer}" Color="Black"/>
+                Glyph="{x:StaticResource IconHandPointer}" Color="{AppThemeBinding Dark=White, Light=Black}"/>
         </ShellContent.Icon>
     </ShellContent>
 
     <FlyoutItem Title="Plattform-Code">
         <FlyoutItem.Icon>
             <FontImageSource FontFamily="FA-6-Solid-900" 
-                Glyph="{x:StaticResource IconCodeFork}" Color="Black"/>
+                Glyph="{x:StaticResource IconCodeFork}" Color="{AppThemeBinding Dark=White, Light=Black}"/>
         </FlyoutItem.Icon>
         <ShellContent
         Title="Präprozessoranweisungen"
@@ -76,7 +76,7 @@
 
         <ShellContent.Icon>
             <FontImageSource FontFamily="FA-6-Solid-900" 
-                Glyph="{x:StaticResource IconMapLocationDot}" Color="Black"/>
+                Glyph="{x:StaticResource IconMapLocationDot}" Color="{AppThemeBinding Dark=White, Light=Black}"/>
         </ShellContent.Icon>
     </ShellContent>
 

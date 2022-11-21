@@ -24,49 +24,52 @@
             <Label Text="{Binding Session.Title}"
                    Margin="20,30,20,0"
                    FontSize="Title"
-                   TextColor="{StaticResource Gray900}"
+                   TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}"
                    FontAttributes="Bold"/>
 
-            <HorizontalStackLayout Margin="20,5,20,0">
+            <FlexLayout Margin="20,5,20,0" AlignItems="Start" Direction="Row" Wrap="Wrap">
                 <Label Text="{Binding Session.Speaker.Name, StringFormat='{0} |'}"
                    FontSize="Caption"
-                   TextColor="{StaticResource Gray900}"
-                   FontAttributes="Bold"/>
+                   TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}"
+                   FontAttributes="Bold"
+                   LineBreakMode="NoWrap"/>
                 <Label Text="{Binding Session.Speaker.Company, StringFormat='{0} |'}"
                    FontSize="Caption"
                    TextColor="{StaticResource Gray400}"
-                   FontAttributes="Bold"/>
+                   FontAttributes="Bold"
+                   LineBreakMode="NoWrap"/>
                 <Label Text="{Binding Session.Speaker.Twitter}"
                    FontSize="Caption"
                    TextColor="{StaticResource Blue100Accent}"
-                   FontAttributes="Bold">
+                   FontAttributes="Bold"
+                   LineBreakMode="NoWrap">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding OpenTwitterCommand}"/>
                     </Label.GestureRecognizers>
                 </Label>
-            </HorizontalStackLayout>
+            </FlexLayout>
             <HorizontalStackLayout Margin="20,5,20,0">
                 <Label Text="{Binding Session.Time}"
                    FontSize="Caption"
-                   TextColor="{StaticResource Gray900}"
+                   TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}"
                    FontAttributes="Bold"
                        VerticalOptions="Center"/>
-                <Border StrokeShape="RoundRectangle 45,45,45,45" StrokeThickness="0" HorizontalOptions="End">
+                <Border StrokeShape="RoundRectangle 45,45,45,45" StrokeThickness="0" BackgroundColor="LightGreen" Margin="10,0">
                     <Label Text="{Binding Session.SessionType}" 
-                           BackgroundColor="LightGreen" Padding="10,5" Margin="10,0"
+                           Padding="10,3" 
                            TextColor="DarkGreen" FontAttributes="Bold"/>
                 </Border>
             </HorizontalStackLayout>
 
-            <Label Text="{Binding Session.Description}" Margin="20" TextColor="{StaticResource Gray600}"/>
+            <Label Text="{Binding Session.Description}" Margin="20" TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}"/>
             <Label Text="Lernziele" Style="{StaticResource HeadingStyle}"
                    IsVisible="{Binding Session.Goals, Converter={StaticResource IsListNotNullOrEmptyConverter}}" />
             <VerticalStackLayout BindableLayout.ItemsSource="{Binding Session.Goals}" Margin="5">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <HorizontalStackLayout Padding="3" Spacing="5">
-                            <Label Text="&#x2022; "/>
-                            <Label Text="{Binding .}"/>
+                            <Label Text="&#x2022; " TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}"/>
+                            <Label Text="{Binding .}" TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray300}}"/>
                         </HorizontalStackLayout>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
